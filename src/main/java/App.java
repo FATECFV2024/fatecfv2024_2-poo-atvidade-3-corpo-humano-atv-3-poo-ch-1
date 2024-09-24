@@ -2,13 +2,13 @@ package main.java;
 import java.util.Scanner;
 
 public class App {
-        //Comentário
+    // Comentário
 
-    public static void funcao_teste (){
-        //Biblioteca para entrada de dados
-        Scanner ler = new Scanner(System.in); 
+    public static void funcao_teste() {
+        // Biblioteca para entrada de dados
+        Scanner ler = new Scanner(System.in);
 
-        //variável local a
+        // Variáveis locais
         String v2;
         int v1;
 
@@ -20,11 +20,14 @@ public class App {
         System.out.printf("Informe um número: ");
         v1 = ler.nextInt();
 
-        System.out.printf(v2+" "+v1);
+        System.out.printf(v2 + " " + v1);
+
+        // Fechar o scanner
+        ler.close();
     }
+
     public static void main(String[] args) throws Exception {
         funcao_teste();
-
-
     }
 }
+
