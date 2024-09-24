@@ -7,7 +7,6 @@ public class CorpoHumano {
     private double densidade;  // em kg/m³
     private double altura;     // em metros
 
-    // Construtor
     public CorpoHumano(double massa, double volume, double densidade, double altura) {
         this.massa = massa;
         this.volume = volume;
