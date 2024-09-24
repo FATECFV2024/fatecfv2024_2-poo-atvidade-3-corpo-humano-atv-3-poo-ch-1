@@ -24,10 +24,10 @@ public class App {
         System.out.println("Informe a altura (m): ");
         altura = ler.nextDouble();
 
-        CorpoHumano corpo = new CorpoHumano(massa, volume, densidade, altura);
+        CorpoHumano c1 = new CorpoHumano(massa, volume, densidade, altura);
 
         System.out.println("\nDados do corpo humano:");
-        corpo.imprimirDados();
+        c1.imprimirDados();
     }
 
     public static void main(String[] args) throws Exception {

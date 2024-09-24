@@ -2,10 +2,10 @@
 package main.java;
 
 public class CorpoHumano {
-    private double massa;      // em kg
-    private double volume;     // em m³
-    private double densidade;  // em kg/m³
-    private double altura;     // em metros
+    private double massa;      // em Kg
+    private double volume;     // em M³
+    private double densidade;  // em Kg/m³
+    private double altura;     // em Metros
 
     public CorpoHumano(double massa, double volume, double densidade, double altura) {
         this.massa = massa;
