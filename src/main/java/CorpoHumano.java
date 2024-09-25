@@ -6,53 +6,36 @@ import java.lang.reflect.Method;
 
 public class CorpoHumano {
 
-    private int idade;
-    private int altura;
-    private String sexo;
+    //Declaração de classes
+    private double altura;
     private int massa;
-    private int volume;
+    private double volume;
     private int densidade;
-    private boolean isAdult;
+
 
     //CONSTRUCTOR
-    public CorpoHumano(int peso, int idade, int altura){
-        this.massa = peso;
-        this.idade = idade;
+        public CorpoHumano(int massa, double volume, int densidade, double altura){
+        this.massa = massa;
         this.altura = altura;
-        if(idade > 18){
-            isAdult = true;
-        } else {
-            isAdult = false;
-        }
     }
 
-    public double calcularImc() {
+    //Método Calcular IMC
+    public double calcularIMC() {
         double alturaEmMetros = altura / 100.0;
         return massa / (alturaEmMetros * alturaEmMetros);
     }
+
     //GETTERS
-        public int getPeso() {
-            return this.idade;
-        }
-        
-        public int getIdade() {
+        public int getMassa() {
             return this.massa;
         }
 
-        public int getAltura() {
+        public double getAltura() {
             return this.altura;
         }
 
-        public int getVolume(){
+        public double getVolume(){
             return this.volume;
-        }
-
-        public boolean getIsAdult(){
-            return this.isAdult;
-        }
-
-        public String getSexo(){
-            return this.sexo;
         }
 
         public int getDensidade(){
@@ -60,25 +43,17 @@ public class CorpoHumano {
         }
 
     // SETTERS
-        public void setPeso(int peso) {
-            this.massa = peso;
+        public void setMassa(int massa) {
+            this.massa = massa;
         }
-
-        public void setAltura(int altura) {
+        public void setAltura(double altura) {
             this.altura = altura;
         }
-
-        public void setIdade(int idade) {
-            this.idade = idade;
+        public void setDensidade(int densidade){
+            this.densidade = densidade;
         }
-
-        public void display() {
-            System.out.println("Peso: " + massa + " kg");
-            System.out.println("Idade: " + idade + " anos");
-            System.out.println("Altura: " + altura + " cm");
-            System.out.println("É adulto: " + isAdult);
-            System.out.printf("IMC: %.2f\n", calcularImc());
+        public void setVolume(double volume){
+            this.volume = volume;
         }
     }
-
-
+        

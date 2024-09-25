@@ -31,9 +31,14 @@
 ### Após essa implementação responda:
 
 - Na classe Corpo_Humano inclua a linha c1.massa = "2"; logo depois de instanciar o objeto c1. Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
-- Na classe Corpo_Humano altere a linha private float Massa para public float Massa; Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
-- Na classe Corpo_Humano altere a linha public setVolume (float volume) para private setVolume (float volume).Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
+- <b> RESPOSTA: </B>
+Um erro será exibido, e esse valor não será atribuído, já que esse atributo é private, logo, inacessível por fora.
 
+- Na classe Corpo_Humano altere a linha private float Massa para public float Massa; Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
+"Nada" acontece, porém o código está mais vulnerável e pode vir a ser alterado sem ser por via de um setter, logo, pode fugir das regras de negócio.
+
+- Na classe Corpo_Humano altere a linha public setVolume (float volume) para private setVolume (float volume).Qual foi a ocorrência? Qual a conclusão sobre o que aconteceu?
+  Esse método será inacessível fora da classe, perdendo sua função como setter, não podendo ser acessível na classe main.
 
 <b>Colocar essa informação no Readme do Git ou Em comentários de código na classe main </b>
 
