@@ -4,15 +4,26 @@ public class CorpoHumano {
     // Atributos
     private float altura; // em metros
     private float peso;   // em kg
-    private float volume; // em metros cúbicos
-    private float densidade;  // em kg/m³
+    private float volume; // em metros cúbicos (calculado)
+    private float densidade;  // em kg/m³ (calculada)
 
     // Construtor
-    public CorpoHumano(float altura, float peso, float volume, float densidade) {
+    public CorpoHumano(float altura, float peso) {
         this.altura = altura;
         this.peso = peso;
-        this.volume = volume;
-        this.densidade = densidade;
+        this.volume = calcularVolume(); // Volume calculado automaticamente
+        this.densidade = calcularDensidade(); // Densidade calculada automaticamente
+    }
+
+    // Método para calcular o volume aproximado (baseado na fórmula de um cilindro simples)
+    public float calcularVolume() {
+        float raio = altura / 4; // Supondo que o "diâmetro" do corpo seja metade da altura
+        return (float) (Math.PI * raio * raio * altura); // π * r² * h
+    }
+
+    // Método para calcular a densidade
+    public float calcularDensidade() {
+        return peso / volume;
     }
 
     // Método para calcular o IMC
@@ -43,19 +54,21 @@ public class CorpoHumano {
     public void exibirInformacoes() {
         System.out.printf("Altura: %.2f m\n", altura);
         System.out.printf("Peso: %.2f kg\n", peso);
-        System.out.printf("Volume: %.2f m³\n", volume);
+        System.out.printf("Volume (aproximado): %.2f m³\n", volume);
         System.out.printf("Densidade: %.2f kg/m³\n", densidade);
         System.out.printf("IMC: %.2f\n", calcularIMC());
         System.out.printf("Classificação do IMC: %s\n", classificarIMC());
     }
 
-    // Getters e Setters
+    // Getters e Setters (caso queira alterar valores)
     public float getAltura() {
         return altura;
     }
 
     public void setAltura(float altura) {
         this.altura = altura;
+        this.volume = calcularVolume(); // Recalcula volume ao alterar altura
+        this.densidade = calcularDensidade(); // Recalcula densidade
     }
 
     public float getPeso() {
@@ -64,21 +77,14 @@ public class CorpoHumano {
 
     public void setPeso(float peso) {
         this.peso = peso;
+        this.densidade = calcularDensidade(); // Recalcula densidade ao alterar peso
     }
 
     public float getVolume() {
         return volume;
     }
 
-    public void setVolume(float volume) {
-        this.volume = volume;
-    }
-
     public float getDensidade() {
         return densidade;
-    }
-
-    public void setDensidade(float densidade) {
-        this.densidade = densidade;
     }
 }

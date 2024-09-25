@@ -11,14 +11,8 @@ public class App {
         System.out.printf("Informe seu peso em kg: ");
         float peso = ler.nextFloat();
 
-        System.out.printf("Informe seu volume em metros cúbicos: ");
-        float volume = ler.nextFloat();
-
-        System.out.printf("Informe sua densidade em kg/m³: ");
-        float densidade = ler.nextFloat();
-
-        // Cria o objeto CorpoHumano com os dados fornecidos
-        CorpoHumano corpo = new CorpoHumano(altura, peso, volume, densidade);
+        // Cria o objeto CorpoHumano com os dados fornecidos, o volume e a densidade serão calculados automaticamente
+        CorpoHumano corpo = new CorpoHumano(altura, peso);
         corpo.exibirInformacoes();
 
         ler.close();
