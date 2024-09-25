@@ -1,56 +1,62 @@
 package main.java;
 
 public class CorpoHumano {
-    // Atributos privados
-    private float massa;
-    private float volume;
-    private float densidade;
-    private float altura;
+    // Atributos
+    private float altura; // em metros
+    private float peso;   // em kg
 
     // Construtor
-    public CorpoHumano(float massa, float volume, float densidade, float altura) {
-        this.massa = massa;
-        this.volume = volume;
-        this.densidade = densidade;
+    public CorpoHumano(float altura, float peso) {
         this.altura = altura;
+        this.peso = peso;
     }
 
-    // Getters
-    public float getMassa() {
-        return massa;
+    // Método para calcular o IMC
+    public float calcularIMC() {
+        return peso / (altura * altura);
     }
 
-    public float getVolume() {
-        return volume;
+    // Método para classificar o IMC
+    public String classificarIMC() {
+        float imc = calcularIMC();
+
+        if (imc < 18.5) {
+            return "Abaixo do peso";
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            return "Peso normal";
+        } else if (imc >= 25 && imc <= 29.9) {
+            return "Sobrepeso";
+        } else if (imc >= 30 && imc <= 34.9) {
+            return "Obesidade grau I";
+        } else if (imc >= 35 && imc <= 39.9) {
+            return "Obesidade grau II";
+        } else {
+            return "Obesidade grau III (Obesidade mórbida)";
+        }
     }
 
-    public float getDensidade() {
-        return densidade;
+    // Método para exibir informações
+    public void exibirInformacoes() {
+        System.out.printf("Altura: %.2f m\n", altura);
+        System.out.printf("Peso: %.2f kg\n", peso);
+        System.out.printf("IMC: %.2f\n", calcularIMC());
+        System.out.printf("Classificação: %s\n", classificarIMC());
     }
 
+    // Getters e Setters (opcionais)
     public float getAltura() {
         return altura;
-    }
-
-    // Setters
-    public void setMassa(float massa) {
-        this.massa = massa;
-    }
-
-    public void setVolume(float volume) {
-        this.volume = volume;
-    }
-
-    public void setDensidade(float densidade) {
-        this.densidade = densidade;
     }
 
     public void setAltura(float altura) {
         this.altura = altura;
     }
 
-    // Método para calcular o IMC
-    public float calcularIMC() {
-        return massa / (altura * altura);
+    public float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso = peso;
     }
 }
