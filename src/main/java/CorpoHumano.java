@@ -4,11 +4,15 @@ public class CorpoHumano {
     // Atributos
     private float altura; // em metros
     private float peso;   // em kg
+    private float volume; // em metros cúbicos
+    private float densidade;  // em kg/m³
 
     // Construtor
-    public CorpoHumano(float altura, float peso) {
+    public CorpoHumano(float altura, float peso, float volume, float densidade) {
         this.altura = altura;
         this.peso = peso;
+        this.volume = volume;
+        this.densidade = densidade;
     }
 
     // Método para calcular o IMC
@@ -35,15 +39,17 @@ public class CorpoHumano {
         }
     }
 
-    // Método para exibir informações
+    // Método para exibir todas as informações
     public void exibirInformacoes() {
         System.out.printf("Altura: %.2f m\n", altura);
         System.out.printf("Peso: %.2f kg\n", peso);
+        System.out.printf("Volume: %.2f m³\n", volume);
+        System.out.printf("Densidade: %.2f kg/m³\n", densidade);
         System.out.printf("IMC: %.2f\n", calcularIMC());
-        System.out.printf("Classificação: %s\n", classificarIMC());
+        System.out.printf("Classificação do IMC: %s\n", classificarIMC());
     }
 
-    // Getters e Setters (opcionais)
+    // Getters e Setters
     public float getAltura() {
         return altura;
     }
@@ -58,5 +64,21 @@ public class CorpoHumano {
 
     public void setPeso(float peso) {
         this.peso = peso;
+    }
+
+    public float getVolume() {
+        return volume;
+    }
+
+    public void setVolume(float volume) {
+        this.volume = volume;
+    }
+
+    public float getDensidade() {
+        return densidade;
+    }
+
+    public void setDensidade(float densidade) {
+        this.densidade = densidade;
     }
 }
