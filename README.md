@@ -40,16 +40,15 @@
 
 ## DESAFIO 🚀
 
-Implementar o Atributo e os Metodos de acesso para Altura;
-Criar um método para calcular o Indíce de Massa Corporal (IMC), sendo:
-IMC = Massa/Altura
-Exibir/Imprimir o IMC na classe main
+- Implementar o Atributo e os Metodos de acesso para Altura;
+- Criar um método para calcular o Indíce de Massa Corporal (IMC), sendo: IMC = Peso/Altura
+- Exibir ou Imprimir o IMC na classe main
 
 
 ## No Microsoft Teams  👥
 
 - Não há necessidade fazer o upload do projeto 
-- Caso tenha realizado em dupla, mencione o NOME e RGM da dupla lá no Teams em um arquivo .txt
+- Enviar o link do repositório 
 
 ## Regras 📄
 
@@ -59,5 +58,5 @@ Exibir/Imprimir o IMC na classe main
 - Utilze comentários para elucidar o cenário elaborado;
 
 ## Feedback 📨
--  Sua atividade receberá uma pontuação de 0 a 10, que compõe a Nota de Atividades da M1;
+-  Sua atividade receberá uma pontuação de 0 a 10, que compõe a Nota de Atividades da ATV1;
 -  A nota será atribuída no Microsoft Teams
